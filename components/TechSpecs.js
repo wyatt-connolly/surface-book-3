@@ -1,6 +1,14 @@
 import React from "react";
-import { Typography, Box, Card, CardContent, CardMedia } from "@mui/material";
+import {
+  Typography,
+  Box,
+  Card,
+  CardContent,
+  CardMedia,
+  Button,
+} from "@mui/material";
 import Image from "next/image";
+import ImageCarousel from "./ImageCarousel/ImageCarousel";
 
 export default function TechSpecs() {
   return (
@@ -107,6 +115,22 @@ export default function TechSpecs() {
           Instant On brings your screen up fast, and Windows Hello logs you in
           with a glance. Open the lid and return to your task in an instant.
         </Typography>
+        <Box
+          sx={{
+            textAlign: "center",
+          }}
+        >
+          <Typography variant="h5" fontWeight="bold">
+            Versatility for the ways you work and create
+          </Typography>
+          <Typography variant="body1" paragraph gutterBottom>
+            Unleash your creativity however inspiration strikes. Whether
+            sketching ideas and handwriting notes, sharing your view with
+            others, or writing code, this detachable laptop adapts to the
+            endless ways you create and collaborate.
+          </Typography>
+          <ImageCarousel />
+        </Box>
       </Box>
     </>
   );

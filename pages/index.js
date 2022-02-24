@@ -7,7 +7,6 @@ import Home from "../components/Home";
 import Features from "../components/Features";
 import { Divider } from "@mui/material";
 import TechSpecs from "../components/TechSpecs";
-import ImageCarousel from "../components/ImageCarousel";
 
 export default function Index() {
   return (
@@ -19,7 +18,6 @@ export default function Index() {
         <Features />
         <Divider sx={{ width: 1 }} />
         <TechSpecs />
-        <ImageCarousel />
       </Container>
     </>
   );

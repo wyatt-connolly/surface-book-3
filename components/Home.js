@@ -13,7 +13,7 @@ export default function Home() {
         textAlign: "center",
       }}
     >
-      <Image src="/surfacebook.bmp" width={375} height={200} />
+      <Image src="/surfacebook1.bmp" width={375} height={200} />
       <Box>
         <Typography
           variant="display"
