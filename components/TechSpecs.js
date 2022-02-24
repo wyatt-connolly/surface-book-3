@@ -8,7 +8,8 @@ import {
   Button,
 } from "@mui/material";
 import Image from "next/image";
-import ImageCarousel from "./ImageCarousel/ImageCarousel";
+import ImageCarousel1 from "./ImageCarousel/ImageCarousel-1";
+import ImageCarousel2 from "./ImageCarousel/ImageCarousel-2";
 
 export default function TechSpecs() {
   return (
@@ -81,12 +82,7 @@ export default function TechSpecs() {
         </Typography>
         <Image src="/surfacebook3.bmp" width={375} height={200} />
       </Box>
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-        }}
-      >
+      <Box>
         <Typography variant="h5" fontWeight="bold">
           Faster than before
         </Typography>
@@ -129,7 +125,17 @@ export default function TechSpecs() {
             others, or writing code, this detachable laptop adapts to the
             endless ways you create and collaborate.
           </Typography>
-          <ImageCarousel />
+          <ImageCarousel1 />
+          <Typography variant="h5" fontWeight="bold" gutterBottom>
+            Get your job done
+          </Typography>
+          <Typography variant="body1" paragraph gutterBottom>
+            Leave your desk behind and keep the best graphics performance of any
+            Surface laptop by your side. Create content, compile code, deploy
+            data models, or realize 3D visualizations wherever you work best.
+          </Typography>
+          <Button>SEE APPS CERTIFIED FOR SURFACE BOOK 3</Button>
+          <ImageCarousel2 />
         </Box>
       </Box>
     </>

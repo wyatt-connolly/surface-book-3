@@ -7,6 +7,8 @@ import Home from "../components/Home";
 import Features from "../components/Features";
 import { Divider } from "@mui/material";
 import TechSpecs from "../components/TechSpecs";
+import TechSpecs2 from "../components/TechSpecs2";
+import Cards from "../components/Cards";
 
 export default function Index() {
   return (
@@ -18,6 +20,9 @@ export default function Index() {
         <Features />
         <Divider sx={{ width: 1 }} />
         <TechSpecs />
+        <TechSpecs2 />
+        <Divider sx={{ width: 1 }} />
+        <Cards />
       </Container>
     </>
   );

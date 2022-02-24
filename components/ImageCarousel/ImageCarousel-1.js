@@ -5,15 +5,13 @@ import {
   ImageList,
   ImageListItem,
   Fade,
-  Card,
-  CardContent,
-  CardMedia,
+  Paper,
 } from "@mui/material";
 import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
 import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
 import Carousel from "react-material-ui-carousel";
 
-export default function ImageCarousel() {
+export default function ImageCarousel1() {
   const items = [
     {
       image: "/surfacecarousel1.bmp",
@@ -45,12 +43,12 @@ export default function ImageCarousel() {
 
 function Item(props) {
   return (
-    <Card>
-      <CardMedia component="img" width="100%" image={props.item.image} />
-      <CardContent>
-        <Typography variant="h6">{props.name}</Typography>
-        <Typography variant="body2">{props.description}</Typography>
-      </CardContent>
-    </Card>
+    <Paper elevation="0">
+      <img width="100%" src={props.item.image} />
+      <Typography variant="h6" gutterBottom>
+        {props.item.name}
+      </Typography>
+      <Typography variant="body2">{props.item.description}</Typography>
+    </Paper>
   );
 }
