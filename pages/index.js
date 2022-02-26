@@ -9,12 +9,16 @@ import { Divider } from "@mui/material";
 import TechSpecs from "../components/TechSpecs";
 import TechSpecs2 from "../components/TechSpecs2";
 import Cards from "../components/Cards";
+import DeviceCarousel from "../components/ImageCarousel/DeviceCarousel";
+import Accessories from "../components/Accessories";
+import Cards2 from "../components/Cards2";
+import Insights from "../components/Insights";
 
 export default function Index() {
   return (
     <>
       <Navbar />
-      <Container maxWidth="sm" sx={{ bgcolor: "background.paper" }}>
+      <Container maxWidth="xl" sx={{ bgcolor: "background.paper" }}>
         <Home />
         <Divider sx={{ width: 1 }} />
         <Features />
@@ -23,6 +27,11 @@ export default function Index() {
         <TechSpecs2 />
         <Divider sx={{ width: 1 }} />
         <Cards />
+        <DeviceCarousel />
+        <Accessories />
+        <Cards2 />
+        <Divider sx={{ width: 1 }} />
+        <Insights />
       </Container>
     </>
   );

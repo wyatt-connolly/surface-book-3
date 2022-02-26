@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 import Image from "next/image";
 import ImageCarousel1 from "./ImageCarousel/ImageCarousel-1";
-import ImageCarousel2 from "./ImageCarousel/ImageCarousel-2";
+import ImageCarousel2 from "./ImageCarousel/ImageTabs";
 
 export default function TechSpecs() {
   return (

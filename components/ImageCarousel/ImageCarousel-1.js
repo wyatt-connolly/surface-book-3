@@ -33,7 +33,7 @@ export default function ImageCarousel1() {
     },
   ];
   return (
-    <Carousel>
+    <Carousel autoPlay={false} IndicatorIcon="" navButtonsAlwaysVisible={true}>
       {items.map((item, i) => (
         <Item key={i} item={item} />
       ))}

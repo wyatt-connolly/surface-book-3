@@ -1,7 +1,7 @@
 import { Box, Typography, Button } from "@mui/material";
 import Image from "next/image";
 import React from "react";
-import ImageCarousel3 from "./ImageCarousel/ImageCarousel-3";
+import ImageCarousel2 from "./ImageCarousel/ImageCarousel-2";
 
 export default function TechSpecs2() {
   return (
@@ -68,7 +68,7 @@ export default function TechSpecs2() {
           Empower people, data, and systems with connected experiences from
           Surface and Microsoft 365.
         </Typography>
-        <ImageCarousel3 />
+        <ImageCarousel2 />
       </Box>
     </Box>
   );
