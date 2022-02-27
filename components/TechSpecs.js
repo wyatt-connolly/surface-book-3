@@ -6,22 +6,36 @@ import {
   CardContent,
   CardMedia,
   Button,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
 } from "@mui/material";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Image from "next/image";
 import ImageCarousel1 from "./ImageCarousel/ImageCarousel-1";
 import ImageCarousel2 from "./ImageCarousel/ImageTabs";
+import TechSpecsTable from "./TechSpecsTable";
 
 export default function TechSpecs() {
   return (
     <>
       <Box
         sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
           textAlign: "center",
         }}
       >
+        <Accordion>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel1a-content"
+            id="panel1a-header"
+          >
+            <Typography>Accordion 1</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <TechSpecsTable />
+          </AccordionDetails>
+        </Accordion>
         <Typography variant="h5" fontWeight="bold" gutterBottom>
           More from the Book you know
         </Typography>
@@ -35,8 +49,6 @@ export default function TechSpecs() {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            position: "relative",
-            height: "400px",
           }}
         >
           <CardMedia

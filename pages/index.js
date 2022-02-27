@@ -18,21 +18,19 @@ export default function Index() {
   return (
     <>
       <Navbar />
-      <Container maxWidth="xl" sx={{ bgcolor: "background.paper" }}>
-        <Home />
-        <Divider sx={{ width: 1 }} />
-        <Features />
-        <Divider sx={{ width: 1 }} />
-        <TechSpecs />
-        <TechSpecs2 />
-        <Divider sx={{ width: 1 }} />
-        <Cards />
-        <DeviceCarousel />
-        <Accessories />
-        <Cards2 />
-        <Divider sx={{ width: 1 }} />
-        <Insights />
-      </Container>
+      <Home />
+      <Divider sx={{ width: 1 }} />
+      <Features />
+      <Divider sx={{ width: 1 }} />
+      <TechSpecs />
+      <TechSpecs2 />
+      <Divider sx={{ width: 1 }} />
+      <Cards />
+      <DeviceCarousel />
+      <Accessories />
+      <Cards2 />
+      <Divider sx={{ width: 1 }} />
+      <Insights />
     </>
   );
 }

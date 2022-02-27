@@ -18,6 +18,9 @@ const theme = createTheme({
     body1: {
       fontFamily: "sans-serif",
     },
+    subtitle1: {
+      fontFamily: "sans-serif",
+    },
   },
 });
 
