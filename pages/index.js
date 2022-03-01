@@ -15,6 +15,12 @@ import Cards2 from "../components/Cards2";
 import Insights from "../components/Insights";
 
 export default function Index() {
+  const [expanded, setExpanded] = React.useState(false);
+
+  const handleChange = (panel) => (event, isExpanded) => {
+    setExpanded(isExpanded ? panel : false);
+  };
+
   return (
     <>
       <Navbar />
@@ -22,7 +28,11 @@ export default function Index() {
       <Divider sx={{ width: 1 }} />
       <Features />
       <Divider sx={{ width: 1 }} />
-      <TechSpecs />
+      <TechSpecs
+        expanded={expanded}
+        setExpanded={setExpanded}
+        handleChange={handleChange}
+      />
       <TechSpecs2 />
       <Divider sx={{ width: 1 }} />
       <Cards />

@@ -22,6 +22,15 @@ const theme = createTheme({
       fontFamily: "sans-serif",
     },
   },
+  components: {
+    MuiTableCell: {
+      styleOverrides: {
+        root: {
+          borderBottom: "none",
+        },
+      },
+    },
+  },
 });
 
 export default theme;

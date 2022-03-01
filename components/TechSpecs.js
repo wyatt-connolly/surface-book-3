@@ -10,32 +10,48 @@ import {
   AccordionSummary,
   AccordionDetails,
 } from "@mui/material";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
+import RemoveCircleOutlineOutlinedIcon from "@mui/icons-material/RemoveCircleOutlineOutlined";
 import Image from "next/image";
 import ImageCarousel1 from "./ImageCarousel/ImageCarousel-1";
 import ImageCarousel2 from "./ImageCarousel/ImageTabs";
-import TechSpecsTable from "./TechSpecsTable";
+import BasicTable from "./Table";
 
-export default function TechSpecs() {
+export default function TechSpecs({ expanded, setExpanded, handleChange }) {
   return (
     <>
+      <Accordion
+        expanded={expanded === "panel1"}
+        onChange={handleChange("panel1")}
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <AccordionSummary
+          sx={{ display: "flex", flexDirection: "row-reverse" }}
+          expandIcon={
+            expanded === "panel1" ? (
+              <RemoveCircleOutlineOutlinedIcon />
+            ) : (
+              <AddCircleOutlineIcon />
+            )
+          }
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography>VIEW TECH SPECS</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <BasicTable />
+        </AccordionDetails>
+      </Accordion>
       <Box
         sx={{
           textAlign: "center",
         }}
       >
-        <Accordion>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel1a-content"
-            id="panel1a-header"
-          >
-            <Typography>Accordion 1</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <TechSpecsTable />
-          </AccordionDetails>
-        </Accordion>
         <Typography variant="h5" fontWeight="bold" gutterBottom>
           More from the Book you know
         </Typography>
