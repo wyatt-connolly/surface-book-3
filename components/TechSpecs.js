@@ -9,6 +9,7 @@ import {
   Accordion,
   AccordionSummary,
   AccordionDetails,
+  Grid,
 } from "@mui/material";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import RemoveCircleOutlineOutlinedIcon from "@mui/icons-material/RemoveCircleOutlineOutlined";
@@ -36,6 +37,7 @@ export default function TechSpecs({ expanded, setExpanded, handleChange }) {
           id="panel1a-header"
         >
           <Button
+            sx={{ my: 5 }}
             startIcon={
               expanded === "panel1" ? (
                 <RemoveCircleOutlineOutlinedIcon sx={{ color: "#0067b8;" }} />
@@ -56,23 +58,26 @@ export default function TechSpecs({ expanded, setExpanded, handleChange }) {
           textAlign: "center",
         }}
       >
-        <Typography variant="h5" fontWeight="bold" gutterBottom>
+        <Typography sx={{ mx: 4 }} variant="h5" fontWeight="bold" gutterBottom>
           More from the Book you know
         </Typography>
-        <Typography variant="body1" paragraph gutterBottom>
+        <Typography sx={{ mx: 3 }} variant="body1" paragraph gutterBottom>
           Tackle tough tasks anywhere you want to work. Surface Book 3 has more
           speed than before and faster memory with up to 2TB of blazing-fast
           storage.
         </Typography>
+
         <Card
           sx={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            mt: 3,
+            mb: 6,
           }}
         >
           <CardMedia
-            sx={{ height: "400px" }}
+            sx={{ minHeight: "400px" }}
             component="img"
             image="/surfacebook2.bmp"
             alt="surface book"
@@ -107,12 +112,19 @@ export default function TechSpecs({ expanded, setExpanded, handleChange }) {
         <Typography variant="h5" fontWeight="bold" gutterBottom>
           Built for performance
         </Typography>
-        <Typography variant="body1" paragraph gutterBottom>
+        <Typography sx={{ mx: 3 }} variant="body1" paragraph gutterBottom>
           Our most powerful Surface laptop yet is a high-performance business
           laptop that helps you tackle complex tasks. Faster than ever, Surface
           Book 3 is optimized for productivity.
         </Typography>
-        <Image src="/surfacebook3.bmp" width={375} height={200} />
+        <Box sx={{ my: 8 }}>
+          <Image
+            src="/surfacebook3.bmp"
+            width={375}
+            height={209}
+            layout="responsive"
+          />
+        </Box>
       </Box>
       <Box>
         <Typography variant="h5" fontWeight="bold">

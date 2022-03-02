@@ -7,8 +7,12 @@ import {
   Tab,
   Avatar,
   Accordion,
+  AccordionSummary,
+  AccordionDetails,
+  Container,
 } from "@mui/material";
 import PlayArrowOutlinedIcon from "@mui/icons-material/PlayArrowOutlined";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Image from "next/image";
 import PropTypes from "prop-types";
 
@@ -24,7 +28,7 @@ function TabPanel(props) {
       {...other}
     >
       {value === index && (
-        <Box sx={{ p: 3 }}>
+        <Box>
           <Typography>{children}</Typography>
         </Box>
       )}
@@ -57,53 +61,78 @@ export default function Home() {
         textAlign: "center",
       }}
     >
-      <Box>
-        <TabPanel value={value} index={0}>
-          <Image src="/surfacebook-tab-1.webp" width={375} height={200} />
-        </TabPanel>
-        <TabPanel value={value} index={1}>
-          <Image src="/surfacebook-tab-2.webp" width={375} height={200} />
-        </TabPanel>
-        <TabPanel value={value} index={2}>
-          <Image src="/surfacebook-tab-3.webp" width={375} height={200} />
-        </TabPanel>
-        <Typography
-          variant="display"
-          component="h1"
-          fontWeight="bold"
-          gutterBottom
-        >
-          Surface Book 3 for Business
-        </Typography>
-        <Typography variant="subtitle1" gutterBottom>
-          Performance meets versatility in our most powerful Surface laptop yet.
-          Speed, graphics, and long battery life pair with the flexibility of a
-          robust laptop, processor-powered tablet, and portable studio.
-        </Typography>
+      <TabPanel value={value} index={0}>
+        <Image
+          src="/surfacebook-tab-1.webp"
+          width={375}
+          height={211}
+          layout="responsive"
+        />
+      </TabPanel>
+      <TabPanel value={value} index={1}>
+        <Image
+          src="/surfacebook-tab-2.webp"
+          width={375}
+          height={211}
+          layout="responsive"
+        />
+      </TabPanel>
+      <TabPanel value={value} index={2}>
+        <Image
+          src="/surfacebook-tab-3.webp"
+          width={375}
+          height={211}
+          layout="responsive"
+        />
+      </TabPanel>
+      <Container maxWidth="xs">
+        <Box>
+          <Typography
+            variant="display"
+            component="h1"
+            fontWeight="bold"
+            gutterBottom
+          >
+            Surface Book 3 for Business
+          </Typography>
+          <Typography variant="subtitle1" gutterBottom>
+            Performance meets versatility in our most powerful Surface laptop
+            yet. Speed, graphics, and long battery life pair with the
+            flexibility of a robust laptop, processor-powered tablet, and
+            portable studio.
+          </Typography>
+        </Box>
         <Button startIcon={<PlayArrowOutlinedIcon />} variant="text">
           See it in action
         </Button>
-      </Box>
-      <Box sx={{ display: "flex", justifyContent: "center" }}>
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          aria-label="basic tabs example"
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            mb: 12,
+            mt: 2,
+          }}
         >
-          <Tab
-            icon={<Avatar alt="test avatar" src="/jumbotron-tab-1.webp" />}
-            {...a11yProps(0)}
-          />
-          <Tab
-            icon={<Avatar alt="test avatar" src="/jumbotron-tab-2.webp" />}
-            {...a11yProps(1)}
-          />
-          <Tab
-            icon={<Avatar alt="test avatar" src="/jumbotron-tab-3.webp" />}
-            {...a11yProps(2)}
-          />
-        </Tabs>
-      </Box>
+          <Tabs
+            value={value}
+            onChange={handleChange}
+            aria-label="basic tabs example"
+          >
+            <Tab
+              icon={<Avatar alt="test avatar" src="/jumbotron-tab-1.webp" />}
+              {...a11yProps(0)}
+            />
+            <Tab
+              icon={<Avatar alt="test avatar" src="/jumbotron-tab-2.webp" />}
+              {...a11yProps(1)}
+            />
+            <Tab
+              icon={<Avatar alt="test avatar" src="/jumbotron-tab-3.webp" />}
+              {...a11yProps(2)}
+            />
+          </Tabs>
+        </Box>
+      </Container>
     </Box>
   );
 }
