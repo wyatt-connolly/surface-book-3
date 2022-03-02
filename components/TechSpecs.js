@@ -27,21 +27,25 @@ export default function TechSpecs({ expanded, setExpanded, handleChange }) {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
+          boxShadow: "none",
         }}
       >
         <AccordionSummary
           sx={{ display: "flex", flexDirection: "row-reverse" }}
-          expandIcon={
-            expanded === "panel1" ? (
-              <RemoveCircleOutlineOutlinedIcon />
-            ) : (
-              <AddCircleOutlineIcon />
-            )
-          }
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography>VIEW TECH SPECS</Typography>
+          <Button
+            startIcon={
+              expanded === "panel1" ? (
+                <RemoveCircleOutlineOutlinedIcon sx={{ color: "#0067b8;" }} />
+              ) : (
+                <AddCircleOutlineIcon sx={{ color: "#0067b8;" }} />
+              )
+            }
+          >
+            VIEW TECH SPECS
+          </Button>
         </AccordionSummary>
         <AccordionDetails>
           <BasicTable />

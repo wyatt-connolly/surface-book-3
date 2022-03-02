@@ -13,6 +13,7 @@ import {
   Paper,
   Typography,
   Divider,
+  TableFooter,
 } from "@mui/material";
 
 function createData(name, description) {
@@ -232,7 +233,18 @@ export default function BasicTable() {
               <TableCell align="right">Surface Book 3 15"</TableCell>
             </TableRow>
           </TableHead>
-          <TableBody>
+          <TableBody
+            sx={{
+              margin: "0",
+              WebkitFlexShrink: "0",
+              MsFlexNegative: "0",
+              flexShrink: "0",
+              borderWidth: "0",
+              borderStyle: "solid",
+              borderColor: "rgba(0, 0, 0, 0.12)",
+              borderBottomWidth: "thin",
+            }}
+          >
             {rows2.map((row) => (
               <TableRow
                 key={row.name}
@@ -270,7 +282,18 @@ export default function BasicTable() {
               <TableCell align="right">Surface Book 3 15"</TableCell>
             </TableRow>
           </TableHead>
-          <TableBody>
+          <TableBody
+            sx={{
+              margin: "0",
+              WebkitFlexShrink: "0",
+              MsFlexNegative: "0",
+              flexShrink: "0",
+              borderWidth: "0",
+              borderStyle: "solid",
+              borderColor: "rgba(0, 0, 0, 0.12)",
+              borderBottomWidth: "thin",
+            }}
+          >
             {rows4.map((row) => (
               <TableRow
                 key={row.name}
@@ -283,6 +306,7 @@ export default function BasicTable() {
               </TableRow>
             ))}
           </TableBody>
+
           <TableHead>
             <TableRow>
               <TableCell>Memory</TableCell>
@@ -308,7 +332,18 @@ export default function BasicTable() {
               <TableCell align="right">Surface Book 3 15"</TableCell>
             </TableRow>
           </TableHead>
-          <TableBody>
+          <TableBody
+            sx={{
+              margin: "0",
+              WebkitFlexShrink: "0",
+              MsFlexNegative: "0",
+              flexShrink: "0",
+              borderWidth: "0",
+              borderStyle: "solid",
+              borderColor: "rgba(0, 0, 0, 0.12)",
+              borderBottomWidth: "thin",
+            }}
+          >
             {rows7.map((row) => (
               <TableRow
                 key={row.name}
@@ -346,7 +381,18 @@ export default function BasicTable() {
               <TableCell align="right">Surface Book 3 15"</TableCell>
             </TableRow>
           </TableHead>
-          <TableBody>
+          <TableBody
+            sx={{
+              margin: "0",
+              WebkitFlexShrink: "0",
+              MsFlexNegative: "0",
+              flexShrink: "0",
+              borderWidth: "0",
+              borderStyle: "solid",
+              borderColor: "rgba(0, 0, 0, 0.12)",
+              borderBottomWidth: "thin",
+            }}
+          >
             {rows9.map((row) => (
               <TableRow
                 key={row.name}
@@ -359,7 +405,18 @@ export default function BasicTable() {
               </TableRow>
             ))}
           </TableBody>
-          <TableBody>
+          <TableBody
+            sx={{
+              margin: "0",
+              WebkitFlexShrink: "0",
+              MsFlexNegative: "0",
+              flexShrink: "0",
+              borderWidth: "0",
+              borderStyle: "solid",
+              borderColor: "rgba(0, 0, 0, 0.12)",
+              borderBottomWidth: "thin",
+            }}
+          >
             {rows10.map((row) => (
               <TableRow
                 key={row.name}
@@ -374,7 +431,18 @@ export default function BasicTable() {
               </TableRow>
             ))}
           </TableBody>
-          <TableBody>
+          <TableBody
+            sx={{
+              margin: "0",
+              WebkitFlexShrink: "0",
+              MsFlexNegative: "0",
+              flexShrink: "0",
+              borderWidth: "0",
+              borderStyle: "solid",
+              borderColor: "rgba(0, 0, 0, 0.12)",
+              borderBottomWidth: "thin",
+            }}
+          >
             {rows11.map((row) => (
               <TableRow
                 key={row.name}
@@ -389,8 +457,18 @@ export default function BasicTable() {
               </TableRow>
             ))}
           </TableBody>
-
-          <TableBody>
+          <TableBody
+            sx={{
+              margin: "0",
+              WebkitFlexShrink: "0",
+              MsFlexNegative: "0",
+              flexShrink: "0",
+              borderWidth: "0",
+              borderStyle: "solid",
+              borderColor: "rgba(0, 0, 0, 0.12)",
+              borderBottomWidth: "thin",
+            }}
+          >
             {rows12.map((row) => (
               <TableRow
                 key={row.name}
@@ -431,7 +509,18 @@ export default function BasicTable() {
               <TableCell align="right">Surface Book 3 13.5"</TableCell>
             </TableRow>
           </TableHead>
-          <TableBody>
+          <TableBody
+            sx={{
+              margin: "0",
+              WebkitFlexShrink: "0",
+              MsFlexNegative: "0",
+              flexShrink: "0",
+              borderWidth: "0",
+              borderStyle: "solid",
+              borderColor: "rgba(0, 0, 0, 0.12)",
+              borderBottomWidth: "thin",
+            }}
+          >
             {rows14.map((row) => (
               <TableRow
                 key={row.name}
@@ -469,7 +558,18 @@ export default function BasicTable() {
               <TableCell align="right">Surface Book 3 13.5"</TableCell>
             </TableRow>
           </TableHead>
-          <TableBody>
+          <TableBody
+            sx={{
+              margin: "0",
+              WebkitFlexShrink: "0",
+              MsFlexNegative: "0",
+              flexShrink: "0",
+              borderWidth: "0",
+              borderStyle: "solid",
+              borderColor: "rgba(0, 0, 0, 0.12)",
+              borderBottomWidth: "thin",
+            }}
+          >
             {rows16.map((row) => (
               <TableRow
                 key={row.name}
@@ -523,7 +623,18 @@ export default function BasicTable() {
               </TableRow>
             ))}
           </TableBody>
-          <TableBody>
+          <TableBody
+            sx={{
+              margin: "0",
+              WebkitFlexShrink: "0",
+              MsFlexNegative: "0",
+              flexShrink: "0",
+              borderWidth: "0",
+              borderStyle: "solid",
+              borderColor: "rgba(0, 0, 0, 0.12)",
+              borderBottomWidth: "thin",
+            }}
+          >
             {rows19.map((row) => (
               <TableRow
                 key={row.name}
@@ -564,7 +675,18 @@ export default function BasicTable() {
               <TableCell align="right">Surface Book 3 15"</TableCell>
             </TableRow>
           </TableHead>
-          <TableBody>
+          <TableBody
+            sx={{
+              margin: "0",
+              WebkitFlexShrink: "0",
+              MsFlexNegative: "0",
+              flexShrink: "0",
+              borderWidth: "0",
+              borderStyle: "solid",
+              borderColor: "rgba(0, 0, 0, 0.12)",
+              borderBottomWidth: "thin",
+            }}
+          >
             {rows21.map((row) => (
               <TableRow
                 key={row.name}
@@ -577,7 +699,18 @@ export default function BasicTable() {
               </TableRow>
             ))}
           </TableBody>
-          <TableBody>
+          <TableBody
+            sx={{
+              margin: "0",
+              WebkitFlexShrink: "0",
+              MsFlexNegative: "0",
+              flexShrink: "0",
+              borderWidth: "0",
+              borderStyle: "solid",
+              borderColor: "rgba(0, 0, 0, 0.12)",
+              borderBottomWidth: "thin",
+            }}
+          >
             {rows22.map((row) => (
               <TableRow
                 key={row.name}
@@ -592,7 +725,18 @@ export default function BasicTable() {
               </TableRow>
             ))}
           </TableBody>
-          <TableBody>
+          <TableBody
+            sx={{
+              margin: "0",
+              WebkitFlexShrink: "0",
+              MsFlexNegative: "0",
+              flexShrink: "0",
+              borderWidth: "0",
+              borderStyle: "solid",
+              borderColor: "rgba(0, 0, 0, 0.12)",
+              borderBottomWidth: "thin",
+            }}
+          >
             {rows23.map((row) => (
               <TableRow
                 key={row.name}
@@ -607,7 +751,18 @@ export default function BasicTable() {
               </TableRow>
             ))}
           </TableBody>
-          <TableBody>
+          <TableBody
+            sx={{
+              margin: "0",
+              WebkitFlexShrink: "0",
+              MsFlexNegative: "0",
+              flexShrink: "0",
+              borderWidth: "0",
+              borderStyle: "solid",
+              borderColor: "rgba(0, 0, 0, 0.12)",
+              borderBottomWidth: "thin",
+            }}
+          >
             {rows24.map((row) => (
               <TableRow
                 key={row.name}
@@ -623,7 +778,18 @@ export default function BasicTable() {
               </TableRow>
             ))}
           </TableBody>
-          <TableBody>
+          <TableBody
+            sx={{
+              margin: "0",
+              WebkitFlexShrink: "0",
+              MsFlexNegative: "0",
+              flexShrink: "0",
+              borderWidth: "0",
+              borderStyle: "solid",
+              borderColor: "rgba(0, 0, 0, 0.12)",
+              borderBottomWidth: "thin",
+            }}
+          >
             {rows25.map((row) => (
               <TableRow
                 key={row.name}
@@ -639,7 +805,18 @@ export default function BasicTable() {
               </TableRow>
             ))}
           </TableBody>
-          <TableBody>
+          <TableBody
+            sx={{
+              margin: "0",
+              WebkitFlexShrink: "0",
+              MsFlexNegative: "0",
+              flexShrink: "0",
+              borderWidth: "0",
+              borderStyle: "solid",
+              borderColor: "rgba(0, 0, 0, 0.12)",
+              borderBottomWidth: "thin",
+            }}
+          >
             {rows26.map((row) => (
               <TableRow
                 key={row.name}
@@ -655,6 +832,7 @@ export default function BasicTable() {
               </TableRow>
             ))}
           </TableBody>
+          <TableCell></TableCell>
         </Table>
       </TableContainer>
     </>

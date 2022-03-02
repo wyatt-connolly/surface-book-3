@@ -30,6 +30,15 @@ const theme = createTheme({
         },
       },
     },
+    MuiAvatar: {
+      styleOverrides: {
+        root: {
+          borderRadius: "none",
+          overflow: "visible",
+          width: "auto",
+        },
+      },
+    },
   },
 });
 

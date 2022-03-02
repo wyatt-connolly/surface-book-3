@@ -8,6 +8,7 @@ import {
   Avatar,
   Accordion,
 } from "@mui/material";
+import PlayArrowOutlinedIcon from "@mui/icons-material/PlayArrowOutlined";
 import Image from "next/image";
 import PropTypes from "prop-types";
 
@@ -79,7 +80,9 @@ export default function Home() {
           Speed, graphics, and long battery life pair with the flexibility of a
           robust laptop, processor-powered tablet, and portable studio.
         </Typography>
-        <Button variant="text">See it in action</Button>
+        <Button startIcon={<PlayArrowOutlinedIcon />} variant="text">
+          See it in action
+        </Button>
       </Box>
       <Box sx={{ display: "flex", justifyContent: "center" }}>
         <Tabs
