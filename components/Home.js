@@ -10,7 +10,10 @@ import {
   AccordionSummary,
   AccordionDetails,
   Container,
+  Stack,
 } from "@mui/material";
+import { styled } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import PlayArrowOutlinedIcon from "@mui/icons-material/PlayArrowOutlined";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Image from "next/image";
@@ -49,6 +52,13 @@ function a11yProps(index) {
   };
 }
 
+const HeroText = styled("div")(({ theme }) => ({
+  [theme.breakpoints.up("lg")]: {
+    position: "absolute",
+    top: "calc(50%)",
+  },
+}));
+
 export default function Home() {
   const [value, setValue] = React.useState(0);
 
@@ -56,83 +66,92 @@ export default function Home() {
     setValue(newValue);
   };
   return (
-    <Box
-      sx={{
-        textAlign: "center",
-      }}
-    >
-      <TabPanel value={value} index={0}>
-        <Image
-          src="/surfacebook-tab-1.webp"
-          width={375}
-          height={211}
-          layout="responsive"
-        />
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        <Image
-          src="/surfacebook-tab-2.webp"
-          width={375}
-          height={211}
-          layout="responsive"
-        />
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        <Image
-          src="/surfacebook-tab-3.webp"
-          width={375}
-          height={211}
-          layout="responsive"
-        />
-      </TabPanel>
-      <Container maxWidth="xs">
-        <Box>
-          <Typography
-            variant="display"
-            component="h1"
-            fontWeight="bold"
-            gutterBottom
-          >
-            Surface Book 3 for Business
-          </Typography>
-          <Typography variant="subtitle1" gutterBottom>
-            Performance meets versatility in our most powerful Surface laptop
-            yet. Speed, graphics, and long battery life pair with the
-            flexibility of a robust laptop, processor-powered tablet, and
-            portable studio.
-          </Typography>
+    <>
+      <Box>
+        <TabPanel value={value} index={0}>
+          <Image
+            src="/surfacebook-tab-1.webp"
+            width={375}
+            height={211}
+            layout="responsive"
+            position="relative"
+          />
+        </TabPanel>
+        <TabPanel value={value} index={1}>
+          <Image
+            src="/surfacebook-tab-2.webp"
+            width={375}
+            height={211}
+            layout="responsive"
+            position="relative"
+          />
+        </TabPanel>
+        <TabPanel value={value} index={2}>
+          <Image
+            src="/surfacebook-tab-3.webp"
+            width={375}
+            height={211}
+            layout="responsive"
+            position="relative"
+          />
+        </TabPanel>
+      </Box>
+      <HeroText>
+        <Box textAlign="center">
+          <Container maxWidth="xs">
+            <Typography
+              variant="h5"
+              component="h1"
+              fontWeight="bold"
+              gutterBottom
+            >
+              Surface Book 3 for Business
+            </Typography>
+
+            <Typography variant="subtitle1" gutterBottom>
+              Performance meets versatility in our most powerful Surface laptop
+              yet. Speed, graphics, and long battery life pair with the
+              flexibility of a robust laptop, processor-powered tablet, and
+              portable studio.
+            </Typography>
+            <Button startIcon={<PlayArrowOutlinedIcon />} variant="text">
+              See it in action
+            </Button>
+            <Stack
+              alignItems="center"
+              sx={{
+                mb: 12,
+                mt: 2,
+              }}
+            >
+              <Tabs
+                value={value}
+                onChange={handleChange}
+                aria-label="basic tabs example"
+              >
+                <Tab
+                  icon={
+                    <Avatar alt="test avatar" src="/jumbotron-tab-1.webp" />
+                  }
+                  {...a11yProps(0)}
+                />
+                <Tab
+                  icon={
+                    <Avatar alt="test avatar" src="/jumbotron-tab-2.webp" />
+                  }
+                  {...a11yProps(1)}
+                />
+                <Tab
+                  icon={
+                    <Avatar alt="test avatar" src="/jumbotron-tab-3.webp" />
+                  }
+                  {...a11yProps(2)}
+                />
+              </Tabs>
+            </Stack>
+          </Container>
         </Box>
-        <Button startIcon={<PlayArrowOutlinedIcon />} variant="text">
-          See it in action
-        </Button>
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            mb: 12,
-            mt: 2,
-          }}
-        >
-          <Tabs
-            value={value}
-            onChange={handleChange}
-            aria-label="basic tabs example"
-          >
-            <Tab
-              icon={<Avatar alt="test avatar" src="/jumbotron-tab-1.webp" />}
-              {...a11yProps(0)}
-            />
-            <Tab
-              icon={<Avatar alt="test avatar" src="/jumbotron-tab-2.webp" />}
-              {...a11yProps(1)}
-            />
-            <Tab
-              icon={<Avatar alt="test avatar" src="/jumbotron-tab-3.webp" />}
-              {...a11yProps(2)}
-            />
-          </Tabs>
-        </Box>
-      </Container>
-    </Box>
+      </HeroText>
+    </>
   );
 }
