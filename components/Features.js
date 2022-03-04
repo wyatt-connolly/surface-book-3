@@ -34,10 +34,10 @@ export default function Features() {
           RTX™ 3000 or GeForce® GTX graphics
         </Typography>
         <Typography variant="subtitle1" paragraph gutterBottom>
-          Two sizes:{" "}
+          Two sizes:
           <Typography variant="h4" component="p">
             13.5”/15”
-          </Typography>{" "}
+          </Typography>
           detachable PixelSense™ Display
         </Typography>
       </Box>

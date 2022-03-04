@@ -9,14 +9,25 @@ import {
   Accordion,
   AccordionSummary,
   AccordionDetails,
-  Grid,
+  Stack,
 } from "@mui/material";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
+import { styled } from "@mui/material/styles";
 import RemoveCircleOutlineOutlinedIcon from "@mui/icons-material/RemoveCircleOutlineOutlined";
 import Image from "next/image";
 import ImageCarousel1 from "./ImageCarousel/ImageCarousel-1";
 import ImageCarousel2 from "./ImageCarousel/ImageTabs";
 import BasicTable from "./Table";
+
+const ResponsiveCard = styled("div")(({ theme }) => ({
+  [theme.breakpoints.down("sm")]: {
+    width: "80%",
+    backgroundColor: "white",
+  },
+  [theme.breakpoints.up("sm")]: {
+    width: "40%",
+  },
+}));
 
 export default function TechSpecs({ expanded, setExpanded, handleChange }) {
   return (
@@ -69,45 +80,43 @@ export default function TechSpecs({ expanded, setExpanded, handleChange }) {
 
         <Card
           sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
             mt: 3,
             mb: 6,
           }}
         >
-          <CardMedia
-            sx={{ minHeight: "400px" }}
-            component="img"
-            image="/surfacebook2.bmp"
-            alt="surface book"
-          />
-          <CardContent
-            sx={{
-              position: "absolute",
-              width: "80%",
-              backgroundColor: "#fff",
-            }}
+          <Stack
+            justifyContent="center"
+            alignItems={{ xs: "center", sm: "flex-end" }}
           >
-            <Typography fontWeight="bold" variant="body1" gutterBottom>
-              Quad-core 10th Gen Intel® Core™ i7 Processor
-            </Typography>
-            <Typography fontWeight="bold" variant="body1" gutterBottom>
-              NVIDIA Quadro and GeForce GTX GPUs
-            </Typography>
-            <Typography fontWeight="bold" variant="body1" gutterBottom>
-              Up to 32GB RAM and 2TB storage
-            </Typography>
-            <Typography fontWeight="bold" variant="body1" gutterBottom>
-              Rich audio with Dolby Atmos® sound
-            </Typography>
-            <Typography fontWeight="bold" variant="body1" gutterBottom>
-              Enhanced dual far-field Studio Mics
-            </Typography>
-            <Typography fontWeight="bold" variant="body1">
-              Resume work fast and securely with Instant On
-            </Typography>
-          </CardContent>
+            <CardMedia
+              sx={{ minHeight: "400px" }}
+              component="img"
+              image="/surfacebook2.bmp"
+              alt="surface book"
+            />
+            <ResponsiveCard sx={{ position: "absolute" }}>
+              <CardContent>
+                <Typography fontWeight="bold" variant="body1" gutterBottom>
+                  Quad-core 10th Gen Intel® Core™ i7 Processor
+                </Typography>
+                <Typography fontWeight="bold" variant="body1" gutterBottom>
+                  NVIDIA Quadro and GeForce GTX GPUs
+                </Typography>
+                <Typography fontWeight="bold" variant="body1" gutterBottom>
+                  Up to 32GB RAM and 2TB storage
+                </Typography>
+                <Typography fontWeight="bold" variant="body1" gutterBottom>
+                  Rich audio with Dolby Atmos® sound
+                </Typography>
+                <Typography fontWeight="bold" variant="body1" gutterBottom>
+                  Enhanced dual far-field Studio Mics
+                </Typography>
+                <Typography fontWeight="bold" variant="body1">
+                  Resume work fast and securely with Instant On
+                </Typography>
+              </CardContent>
+            </ResponsiveCard>
+          </Stack>
         </Card>
         <Typography variant="h5" fontWeight="bold" gutterBottom>
           Built for performance

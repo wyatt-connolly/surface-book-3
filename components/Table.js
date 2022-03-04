@@ -14,6 +14,7 @@ import {
   Typography,
   Divider,
   TableFooter,
+  Stack,
 } from "@mui/material";
 
 function createData(name, description) {
@@ -207,633 +208,638 @@ export default function BasicTable() {
         <Typography variant="h6" gutterBottom>
           Tech specs
         </Typography>
-        <Table aria-label="simple table">
-          <TableHead>
-            <TableRow>
-              <TableCell>Dimensions</TableCell>
-              <TableCell align="right">Surface Book 3 13.5"</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {rows.map((row) => (
-              <TableRow
-                key={row.name}
-                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-              >
-                <TableCell component="th" scope="row">
-                  {row.name}
-                </TableCell>
-                <TableCell align="right">{row.description}</TableCell>
+        <Stack
+          direction={{ xs: "column", sm: "row" }}
+          spacing={{ sm: 4, md: 8 }}
+        >
+          <Table aria-label="simple table">
+            <TableHead>
+              <TableRow>
+                <TableCell>Dimensions</TableCell>
+                <TableCell align="right">Surface Book 3 13.5"</TableCell>
               </TableRow>
-            ))}
-          </TableBody>
-          <TableHead>
-            <TableRow>
-              <TableCell> </TableCell>
-              <TableCell align="right">Surface Book 3 15"</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody
-            sx={{
-              margin: "0",
-              WebkitFlexShrink: "0",
-              MsFlexNegative: "0",
-              flexShrink: "0",
-              borderWidth: "0",
-              borderStyle: "solid",
-              borderColor: "rgba(0, 0, 0, 0.12)",
-              borderBottomWidth: "thin",
-            }}
-          >
-            {rows2.map((row) => (
-              <TableRow
-                key={row.name}
-                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-              >
-                <TableCell component="th" scope="row">
-                  {row.name}
-                </TableCell>
-                <TableCell align="right">{row.description}</TableCell>
+            </TableHead>
+            <TableBody>
+              {rows.map((row) => (
+                <TableRow
+                  key={row.name}
+                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                >
+                  <TableCell component="th" scope="row">
+                    {row.name}
+                  </TableCell>
+                  <TableCell align="right">{row.description}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+            <TableHead>
+              <TableRow>
+                <TableCell> </TableCell>
+                <TableCell align="right">Surface Book 3 15"</TableCell>
               </TableRow>
-            ))}
-          </TableBody>
-          <TableHead>
-            <TableRow>
-              <TableCell>Display</TableCell>
-              <TableCell align="right">Surface Book 3 13.5"</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {rows3.map((row) => (
-              <TableRow
-                key={row.name}
-                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-              >
-                <TableCell component="th" scope="row">
-                  {row.name}
-                </TableCell>
-                <TableCell align="right">{row.description}</TableCell>
+            </TableHead>
+            <TableBody
+              sx={{
+                margin: "0",
+                WebkitFlexShrink: "0",
+                MsFlexNegative: "0",
+                flexShrink: "0",
+                borderWidth: "0",
+                borderStyle: "solid",
+                borderColor: "rgba(0, 0, 0, 0.12)",
+                borderBottomWidth: "thin",
+              }}
+            >
+              {rows2.map((row) => (
+                <TableRow
+                  key={row.name}
+                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                >
+                  <TableCell component="th" scope="row">
+                    {row.name}
+                  </TableCell>
+                  <TableCell align="right">{row.description}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+            <TableHead>
+              <TableRow>
+                <TableCell>Display</TableCell>
+                <TableCell align="right">Surface Book 3 13.5"</TableCell>
               </TableRow>
-            ))}
-          </TableBody>
-          <TableHead>
-            <TableRow>
-              <TableCell></TableCell>
-              <TableCell align="right">Surface Book 3 15"</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody
-            sx={{
-              margin: "0",
-              WebkitFlexShrink: "0",
-              MsFlexNegative: "0",
-              flexShrink: "0",
-              borderWidth: "0",
-              borderStyle: "solid",
-              borderColor: "rgba(0, 0, 0, 0.12)",
-              borderBottomWidth: "thin",
-            }}
-          >
-            {rows4.map((row) => (
-              <TableRow
-                key={row.name}
-                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-              >
-                <TableCell component="th" scope="row">
-                  {row.name}
-                </TableCell>
-                <TableCell align="right">{row.description}</TableCell>
+            </TableHead>
+            <TableBody>
+              {rows3.map((row) => (
+                <TableRow
+                  key={row.name}
+                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                >
+                  <TableCell component="th" scope="row">
+                    {row.name}
+                  </TableCell>
+                  <TableCell align="right">{row.description}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+            <TableHead>
+              <TableRow>
+                <TableCell></TableCell>
+                <TableCell align="right">Surface Book 3 15"</TableCell>
               </TableRow>
-            ))}
-          </TableBody>
+            </TableHead>
+            <TableBody
+              sx={{
+                margin: "0",
+                WebkitFlexShrink: "0",
+                MsFlexNegative: "0",
+                flexShrink: "0",
+                borderWidth: "0",
+                borderStyle: "solid",
+                borderColor: "rgba(0, 0, 0, 0.12)",
+                borderBottomWidth: "thin",
+              }}
+            >
+              {rows4.map((row) => (
+                <TableRow
+                  key={row.name}
+                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                >
+                  <TableCell component="th" scope="row">
+                    {row.name}
+                  </TableCell>
+                  <TableCell align="right">{row.description}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
 
-          <TableHead>
-            <TableRow>
-              <TableCell>Memory</TableCell>
-              <TableCell align="right">Surface Book 3 13.5"</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {rows6.map((row) => (
-              <TableRow
-                key={row.name}
-                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-              >
-                <TableCell component="th" scope="row">
-                  {row.name}
-                </TableCell>
-                <TableCell align="right">{row.description}</TableCell>
+            <TableHead>
+              <TableRow>
+                <TableCell>Memory</TableCell>
+                <TableCell align="right">Surface Book 3 13.5"</TableCell>
               </TableRow>
-            ))}
-          </TableBody>
-          <TableHead>
-            <TableRow>
-              <TableCell></TableCell>
-              <TableCell align="right">Surface Book 3 15"</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody
-            sx={{
-              margin: "0",
-              WebkitFlexShrink: "0",
-              MsFlexNegative: "0",
-              flexShrink: "0",
-              borderWidth: "0",
-              borderStyle: "solid",
-              borderColor: "rgba(0, 0, 0, 0.12)",
-              borderBottomWidth: "thin",
-            }}
-          >
-            {rows7.map((row) => (
-              <TableRow
-                key={row.name}
-                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-              >
-                <TableCell component="th" scope="row">
-                  {row.name}
-                </TableCell>
-                <TableCell align="right">{row.description}</TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-          <TableHead>
-            <TableRow>
-              <TableCell>Processor</TableCell>
-              <TableCell align="right">Surface Book 3 13.5"</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {rows8.map((row) => (
-              <TableRow
-                key={row.name}
-                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-              >
-                <TableCell component="th" scope="row">
-                  {row.name}
-                </TableCell>
-                <TableCell align="right">{row.description}</TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-          <TableHead>
-            <TableRow>
-              <TableCell></TableCell>
-              <TableCell align="right">Surface Book 3 15"</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody
-            sx={{
-              margin: "0",
-              WebkitFlexShrink: "0",
-              MsFlexNegative: "0",
-              flexShrink: "0",
-              borderWidth: "0",
-              borderStyle: "solid",
-              borderColor: "rgba(0, 0, 0, 0.12)",
-              borderBottomWidth: "thin",
-            }}
-          >
-            {rows9.map((row) => (
-              <TableRow
-                key={row.name}
-                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-              >
-                <TableCell component="th" scope="row">
-                  {row.name}
-                </TableCell>
-                <TableCell align="right">{row.description}</TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-          <TableBody
-            sx={{
-              margin: "0",
-              WebkitFlexShrink: "0",
-              MsFlexNegative: "0",
-              flexShrink: "0",
-              borderWidth: "0",
-              borderStyle: "solid",
-              borderColor: "rgba(0, 0, 0, 0.12)",
-              borderBottomWidth: "thin",
-            }}
-          >
-            {rows10.map((row) => (
-              <TableRow
-                key={row.name}
-                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-              >
-                <TableHead>
+            </TableHead>
+            <TableBody>
+              {rows6.map((row) => (
+                <TableRow
+                  key={row.name}
+                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                >
                   <TableCell component="th" scope="row">
                     {row.name}
                   </TableCell>
-                </TableHead>
-                <TableCell align="right">{row.description}</TableCell>
+                  <TableCell align="right">{row.description}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+            <TableHead>
+              <TableRow>
+                <TableCell></TableCell>
+                <TableCell align="right">Surface Book 3 15"</TableCell>
               </TableRow>
-            ))}
-          </TableBody>
-          <TableBody
-            sx={{
-              margin: "0",
-              WebkitFlexShrink: "0",
-              MsFlexNegative: "0",
-              flexShrink: "0",
-              borderWidth: "0",
-              borderStyle: "solid",
-              borderColor: "rgba(0, 0, 0, 0.12)",
-              borderBottomWidth: "thin",
-            }}
-          >
-            {rows11.map((row) => (
-              <TableRow
-                key={row.name}
-                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-              >
-                <TableHead>
+            </TableHead>
+            <TableBody
+              sx={{
+                margin: "0",
+                WebkitFlexShrink: "0",
+                MsFlexNegative: "0",
+                flexShrink: "0",
+                borderWidth: "0",
+                borderStyle: "solid",
+                borderColor: "rgba(0, 0, 0, 0.12)",
+                borderBottomWidth: "thin",
+              }}
+            >
+              {rows7.map((row) => (
+                <TableRow
+                  key={row.name}
+                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                >
                   <TableCell component="th" scope="row">
                     {row.name}
                   </TableCell>
-                </TableHead>
-                <TableCell align="right">{row.description}</TableCell>
+                  <TableCell align="right">{row.description}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+            <TableHead>
+              <TableRow>
+                <TableCell>Processor</TableCell>
+                <TableCell align="right">Surface Book 3 13.5"</TableCell>
               </TableRow>
-            ))}
-          </TableBody>
-          <TableBody
-            sx={{
-              margin: "0",
-              WebkitFlexShrink: "0",
-              MsFlexNegative: "0",
-              flexShrink: "0",
-              borderWidth: "0",
-              borderStyle: "solid",
-              borderColor: "rgba(0, 0, 0, 0.12)",
-              borderBottomWidth: "thin",
-            }}
-          >
-            {rows12.map((row) => (
-              <TableRow
-                key={row.name}
-                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-              >
-                <TableHead>
+            </TableHead>
+            <TableBody>
+              {rows8.map((row) => (
+                <TableRow
+                  key={row.name}
+                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                >
                   <TableCell component="th" scope="row">
                     {row.name}
                   </TableCell>
-                </TableHead>
+                  <TableCell align="right">{row.description}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+            <TableHead>
+              <TableRow>
+                <TableCell></TableCell>
+                <TableCell align="right">Surface Book 3 15"</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody
+              sx={{
+                margin: "0",
+                WebkitFlexShrink: "0",
+                MsFlexNegative: "0",
+                flexShrink: "0",
+                borderWidth: "0",
+                borderStyle: "solid",
+                borderColor: "rgba(0, 0, 0, 0.12)",
+                borderBottomWidth: "thin",
+              }}
+            >
+              {rows9.map((row) => (
+                <TableRow
+                  key={row.name}
+                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                >
+                  <TableCell component="th" scope="row">
+                    {row.name}
+                  </TableCell>
+                  <TableCell align="right">{row.description}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+            <TableBody
+              sx={{
+                margin: "0",
+                WebkitFlexShrink: "0",
+                MsFlexNegative: "0",
+                flexShrink: "0",
+                borderWidth: "0",
+                borderStyle: "solid",
+                borderColor: "rgba(0, 0, 0, 0.12)",
+                borderBottomWidth: "thin",
+              }}
+            >
+              {rows10.map((row) => (
+                <TableRow
+                  key={row.name}
+                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                >
+                  <TableHead>
+                    <TableCell component="th" scope="row">
+                      {row.name}
+                    </TableCell>
+                  </TableHead>
+                  <TableCell align="right">{row.description}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+            <TableBody
+              sx={{
+                margin: "0",
+                WebkitFlexShrink: "0",
+                MsFlexNegative: "0",
+                flexShrink: "0",
+                borderWidth: "0",
+                borderStyle: "solid",
+                borderColor: "rgba(0, 0, 0, 0.12)",
+                borderBottomWidth: "thin",
+              }}
+            >
+              {rows11.map((row) => (
+                <TableRow
+                  key={row.name}
+                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                >
+                  <TableHead>
+                    <TableCell component="th" scope="row">
+                      {row.name}
+                    </TableCell>
+                  </TableHead>
+                  <TableCell align="right">{row.description}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+            <TableBody
+              sx={{
+                margin: "0",
+                WebkitFlexShrink: "0",
+                MsFlexNegative: "0",
+                flexShrink: "0",
+                borderWidth: "0",
+                borderStyle: "solid",
+                borderColor: "rgba(0, 0, 0, 0.12)",
+                borderBottomWidth: "thin",
+              }}
+            >
+              {rows12.map((row) => (
+                <TableRow
+                  key={row.name}
+                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                >
+                  <TableHead>
+                    <TableCell component="th" scope="row">
+                      {row.name}
+                    </TableCell>
+                  </TableHead>
 
-                <TableCell align="right">{row.description}</TableCell>
+                  <TableCell align="right">{row.description}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+            <TableHead>
+              <TableRow>
+                <TableCell>What's in the box</TableCell>
+                <TableCell align="right">Surface Book 3 13.5"</TableCell>
               </TableRow>
-            ))}
-          </TableBody>
-          <TableHead>
-            <TableRow>
-              <TableCell>What's in the box</TableCell>
-              <TableCell align="right">Surface Book 3 13.5"</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {rows13.map((row) => (
-              <TableRow
-                key={row.name}
-                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-              >
-                <TableCell component="th" scope="row">
-                  {row.name}
-                </TableCell>
-                <TableCell align="right">{row.description}</TableCell>
+            </TableHead>
+            <TableBody>
+              {rows13.map((row) => (
+                <TableRow
+                  key={row.name}
+                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                >
+                  <TableCell component="th" scope="row">
+                    {row.name}
+                  </TableCell>
+                  <TableCell align="right">{row.description}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+            <TableHead>
+              <TableRow>
+                <TableCell></TableCell>
+                <TableCell align="right">Surface Book 3 13.5"</TableCell>
               </TableRow>
-            ))}
-          </TableBody>
-          <TableHead>
-            <TableRow>
-              <TableCell></TableCell>
-              <TableCell align="right">Surface Book 3 13.5"</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody
-            sx={{
-              margin: "0",
-              WebkitFlexShrink: "0",
-              MsFlexNegative: "0",
-              flexShrink: "0",
-              borderWidth: "0",
-              borderStyle: "solid",
-              borderColor: "rgba(0, 0, 0, 0.12)",
-              borderBottomWidth: "thin",
-            }}
-          >
-            {rows14.map((row) => (
-              <TableRow
-                key={row.name}
-                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-              >
-                <TableCell component="th" scope="row">
-                  {row.name}
-                </TableCell>
-                <TableCell align="right">{row.description}</TableCell>
+            </TableHead>
+            <TableBody
+              sx={{
+                margin: "0",
+                WebkitFlexShrink: "0",
+                MsFlexNegative: "0",
+                flexShrink: "0",
+                borderWidth: "0",
+                borderStyle: "solid",
+                borderColor: "rgba(0, 0, 0, 0.12)",
+                borderBottomWidth: "thin",
+              }}
+            >
+              {rows14.map((row) => (
+                <TableRow
+                  key={row.name}
+                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                >
+                  <TableCell component="th" scope="row">
+                    {row.name}
+                  </TableCell>
+                  <TableCell align="right">{row.description}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+            <TableHead>
+              <TableRow>
+                <TableCell>Weight</TableCell>
+                <TableCell align="right">Surface Book 3 13.5"</TableCell>
               </TableRow>
-            ))}
-          </TableBody>
-          <TableHead>
-            <TableRow>
-              <TableCell>Weight</TableCell>
-              <TableCell align="right">Surface Book 3 13.5"</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {rows15.map((row) => (
-              <TableRow
-                key={row.name}
-                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-              >
-                <TableCell component="th" scope="row">
-                  {row.name}
-                </TableCell>
-                <TableCell align="right">{row.description}</TableCell>
+            </TableHead>
+            <TableBody>
+              {rows15.map((row) => (
+                <TableRow
+                  key={row.name}
+                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                >
+                  <TableCell component="th" scope="row">
+                    {row.name}
+                  </TableCell>
+                  <TableCell align="right">{row.description}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+            <TableHead>
+              <TableRow>
+                <TableCell></TableCell>
+                <TableCell align="right">Surface Book 3 13.5"</TableCell>
               </TableRow>
-            ))}
-          </TableBody>
-          <TableHead>
-            <TableRow>
-              <TableCell></TableCell>
-              <TableCell align="right">Surface Book 3 13.5"</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody
-            sx={{
-              margin: "0",
-              WebkitFlexShrink: "0",
-              MsFlexNegative: "0",
-              flexShrink: "0",
-              borderWidth: "0",
-              borderStyle: "solid",
-              borderColor: "rgba(0, 0, 0, 0.12)",
-              borderBottomWidth: "thin",
-            }}
-          >
-            {rows16.map((row) => (
-              <TableRow
-                key={row.name}
-                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-              >
-                <TableCell component="th" scope="row">
-                  {row.name}
-                </TableCell>
-                <TableCell align="right">{row.description}</TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
+            </TableHead>
+            <TableBody
+              sx={{
+                margin: "0",
+                WebkitFlexShrink: "0",
+                MsFlexNegative: "0",
+                flexShrink: "0",
+                borderWidth: "0",
+                borderStyle: "solid",
+                borderColor: "rgba(0, 0, 0, 0.12)",
+                borderBottomWidth: "thin",
+              }}
+            >
+              {rows16.map((row) => (
+                <TableRow
+                  key={row.name}
+                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                >
+                  <TableCell component="th" scope="row">
+                    {row.name}
+                  </TableCell>
+                  <TableCell align="right">{row.description}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
 
-        <Table>
-          <TableHead>
-            <TableRow>
-              <TableCell>Storage</TableCell>
-              <TableCell align="right">Surface Book 3 13.5"</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {rows17.map((row) => (
-              <TableRow
-                key={row.name}
-                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-              >
-                <TableCell component="th" scope="row">
-                  {row.name}
-                </TableCell>
-                <TableCell align="right">{row.description}</TableCell>
+          <Table>
+            <TableHead>
+              <TableRow>
+                <TableCell>Storage</TableCell>
+                <TableCell align="right">Surface Book 3 13.5"</TableCell>
               </TableRow>
-            ))}
-          </TableBody>
-          <TableHead>
-            <TableRow>
-              <TableCell></TableCell>
-              <TableCell align="right">Surface Book 3 15"</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {rows18.map((row) => (
-              <TableRow
-                key={row.name}
-                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-              >
-                <TableCell component="th" scope="row">
-                  {row.name}
-                </TableCell>
-                <TableCell align="right">{row.description}</TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-          <TableBody
-            sx={{
-              margin: "0",
-              WebkitFlexShrink: "0",
-              MsFlexNegative: "0",
-              flexShrink: "0",
-              borderWidth: "0",
-              borderStyle: "solid",
-              borderColor: "rgba(0, 0, 0, 0.12)",
-              borderBottomWidth: "thin",
-            }}
-          >
-            {rows19.map((row) => (
-              <TableRow
-                key={row.name}
-                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-              >
-                <TableHead>
+            </TableHead>
+            <TableBody>
+              {rows17.map((row) => (
+                <TableRow
+                  key={row.name}
+                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                >
                   <TableCell component="th" scope="row">
                     {row.name}
                   </TableCell>
-                </TableHead>
+                  <TableCell align="right">{row.description}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+            <TableHead>
+              <TableRow>
+                <TableCell></TableCell>
+                <TableCell align="right">Surface Book 3 15"</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {rows18.map((row) => (
+                <TableRow
+                  key={row.name}
+                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                >
+                  <TableCell component="th" scope="row">
+                    {row.name}
+                  </TableCell>
+                  <TableCell align="right">{row.description}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+            <TableBody
+              sx={{
+                margin: "0",
+                WebkitFlexShrink: "0",
+                MsFlexNegative: "0",
+                flexShrink: "0",
+                borderWidth: "0",
+                borderStyle: "solid",
+                borderColor: "rgba(0, 0, 0, 0.12)",
+                borderBottomWidth: "thin",
+              }}
+            >
+              {rows19.map((row) => (
+                <TableRow
+                  key={row.name}
+                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                >
+                  <TableHead>
+                    <TableCell component="th" scope="row">
+                      {row.name}
+                    </TableCell>
+                  </TableHead>
 
-                <TableCell align="right">{row.description}</TableCell>
+                  <TableCell align="right">{row.description}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+            <TableHead>
+              <TableRow>
+                <TableCell>Graphics</TableCell>
+                <TableCell align="right">Surface Book 3 13.5"</TableCell>
               </TableRow>
-            ))}
-          </TableBody>
-          <TableHead>
-            <TableRow>
-              <TableCell>Graphics</TableCell>
-              <TableCell align="right">Surface Book 3 13.5"</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {rows20.map((row) => (
-              <TableRow
-                key={row.name}
-                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-              >
-                <TableCell component="th" scope="row">
-                  {row.name}
-                </TableCell>
-                <TableCell align="right">{row.description}</TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-          <TableHead>
-            <TableRow>
-              <TableCell></TableCell>
-              <TableCell align="right">Surface Book 3 15"</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody
-            sx={{
-              margin: "0",
-              WebkitFlexShrink: "0",
-              MsFlexNegative: "0",
-              flexShrink: "0",
-              borderWidth: "0",
-              borderStyle: "solid",
-              borderColor: "rgba(0, 0, 0, 0.12)",
-              borderBottomWidth: "thin",
-            }}
-          >
-            {rows21.map((row) => (
-              <TableRow
-                key={row.name}
-                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-              >
-                <TableCell component="th" scope="row">
-                  {row.name}
-                </TableCell>
-                <TableCell align="right">{row.description}</TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-          <TableBody
-            sx={{
-              margin: "0",
-              WebkitFlexShrink: "0",
-              MsFlexNegative: "0",
-              flexShrink: "0",
-              borderWidth: "0",
-              borderStyle: "solid",
-              borderColor: "rgba(0, 0, 0, 0.12)",
-              borderBottomWidth: "thin",
-            }}
-          >
-            {rows22.map((row) => (
-              <TableRow
-                key={row.name}
-                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-              >
-                <TableHead>
+            </TableHead>
+            <TableBody>
+              {rows20.map((row) => (
+                <TableRow
+                  key={row.name}
+                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                >
                   <TableCell component="th" scope="row">
                     {row.name}
                   </TableCell>
-                </TableHead>
-                <TableCell align="right">{row.description}</TableCell>
+                  <TableCell align="right">{row.description}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+            <TableHead>
+              <TableRow>
+                <TableCell></TableCell>
+                <TableCell align="right">Surface Book 3 15"</TableCell>
               </TableRow>
-            ))}
-          </TableBody>
-          <TableBody
-            sx={{
-              margin: "0",
-              WebkitFlexShrink: "0",
-              MsFlexNegative: "0",
-              flexShrink: "0",
-              borderWidth: "0",
-              borderStyle: "solid",
-              borderColor: "rgba(0, 0, 0, 0.12)",
-              borderBottomWidth: "thin",
-            }}
-          >
-            {rows23.map((row) => (
-              <TableRow
-                key={row.name}
-                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-              >
-                <TableHead>
+            </TableHead>
+            <TableBody
+              sx={{
+                margin: "0",
+                WebkitFlexShrink: "0",
+                MsFlexNegative: "0",
+                flexShrink: "0",
+                borderWidth: "0",
+                borderStyle: "solid",
+                borderColor: "rgba(0, 0, 0, 0.12)",
+                borderBottomWidth: "thin",
+              }}
+            >
+              {rows21.map((row) => (
+                <TableRow
+                  key={row.name}
+                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                >
                   <TableCell component="th" scope="row">
                     {row.name}
                   </TableCell>
-                </TableHead>
-                <TableCell align="right">{row.description}</TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-          <TableBody
-            sx={{
-              margin: "0",
-              WebkitFlexShrink: "0",
-              MsFlexNegative: "0",
-              flexShrink: "0",
-              borderWidth: "0",
-              borderStyle: "solid",
-              borderColor: "rgba(0, 0, 0, 0.12)",
-              borderBottomWidth: "thin",
-            }}
-          >
-            {rows24.map((row) => (
-              <TableRow
-                key={row.name}
-                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-              >
-                <TableHead>
-                  <TableCell component="th" scope="row">
-                    {row.name}
-                  </TableCell>
-                </TableHead>
+                  <TableCell align="right">{row.description}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+            <TableBody
+              sx={{
+                margin: "0",
+                WebkitFlexShrink: "0",
+                MsFlexNegative: "0",
+                flexShrink: "0",
+                borderWidth: "0",
+                borderStyle: "solid",
+                borderColor: "rgba(0, 0, 0, 0.12)",
+                borderBottomWidth: "thin",
+              }}
+            >
+              {rows22.map((row) => (
+                <TableRow
+                  key={row.name}
+                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                >
+                  <TableHead>
+                    <TableCell component="th" scope="row">
+                      {row.name}
+                    </TableCell>
+                  </TableHead>
+                  <TableCell align="right">{row.description}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+            <TableBody
+              sx={{
+                margin: "0",
+                WebkitFlexShrink: "0",
+                MsFlexNegative: "0",
+                flexShrink: "0",
+                borderWidth: "0",
+                borderStyle: "solid",
+                borderColor: "rgba(0, 0, 0, 0.12)",
+                borderBottomWidth: "thin",
+              }}
+            >
+              {rows23.map((row) => (
+                <TableRow
+                  key={row.name}
+                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                >
+                  <TableHead>
+                    <TableCell component="th" scope="row">
+                      {row.name}
+                    </TableCell>
+                  </TableHead>
+                  <TableCell align="right">{row.description}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+            <TableBody
+              sx={{
+                margin: "0",
+                WebkitFlexShrink: "0",
+                MsFlexNegative: "0",
+                flexShrink: "0",
+                borderWidth: "0",
+                borderStyle: "solid",
+                borderColor: "rgba(0, 0, 0, 0.12)",
+                borderBottomWidth: "thin",
+              }}
+            >
+              {rows24.map((row) => (
+                <TableRow
+                  key={row.name}
+                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                >
+                  <TableHead>
+                    <TableCell component="th" scope="row">
+                      {row.name}
+                    </TableCell>
+                  </TableHead>
 
-                <TableCell align="right">{row.description}</TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-          <TableBody
-            sx={{
-              margin: "0",
-              WebkitFlexShrink: "0",
-              MsFlexNegative: "0",
-              flexShrink: "0",
-              borderWidth: "0",
-              borderStyle: "solid",
-              borderColor: "rgba(0, 0, 0, 0.12)",
-              borderBottomWidth: "thin",
-            }}
-          >
-            {rows25.map((row) => (
-              <TableRow
-                key={row.name}
-                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-              >
-                <TableHead>
-                  <TableCell component="th" scope="row">
-                    {row.name}
-                  </TableCell>
-                </TableHead>
+                  <TableCell align="right">{row.description}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+            <TableBody
+              sx={{
+                margin: "0",
+                WebkitFlexShrink: "0",
+                MsFlexNegative: "0",
+                flexShrink: "0",
+                borderWidth: "0",
+                borderStyle: "solid",
+                borderColor: "rgba(0, 0, 0, 0.12)",
+                borderBottomWidth: "thin",
+              }}
+            >
+              {rows25.map((row) => (
+                <TableRow
+                  key={row.name}
+                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                >
+                  <TableHead>
+                    <TableCell component="th" scope="row">
+                      {row.name}
+                    </TableCell>
+                  </TableHead>
 
-                <TableCell align="right">{row.description}</TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-          <TableBody
-            sx={{
-              margin: "0",
-              WebkitFlexShrink: "0",
-              MsFlexNegative: "0",
-              flexShrink: "0",
-              borderWidth: "0",
-              borderStyle: "solid",
-              borderColor: "rgba(0, 0, 0, 0.12)",
-              borderBottomWidth: "thin",
-            }}
-          >
-            {rows26.map((row) => (
-              <TableRow
-                key={row.name}
-                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-              >
-                <TableHead>
-                  <TableCell component="th" scope="row">
-                    {row.name}
-                  </TableCell>
-                </TableHead>
+                  <TableCell align="right">{row.description}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+            <TableBody
+              sx={{
+                margin: "0",
+                WebkitFlexShrink: "0",
+                MsFlexNegative: "0",
+                flexShrink: "0",
+                borderWidth: "0",
+                borderStyle: "solid",
+                borderColor: "rgba(0, 0, 0, 0.12)",
+                borderBottomWidth: "thin",
+              }}
+            >
+              {rows26.map((row) => (
+                <TableRow
+                  key={row.name}
+                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                >
+                  <TableHead>
+                    <TableCell component="th" scope="row">
+                      {row.name}
+                    </TableCell>
+                  </TableHead>
 
-                <TableCell align="right">{row.description}</TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-          <TableCell></TableCell>
-        </Table>
+                  <TableCell align="right">{row.description}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+            <TableCell></TableCell>
+          </Table>
+        </Stack>
       </TableContainer>
     </>
   );

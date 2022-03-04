@@ -101,7 +101,7 @@ export default function ButtonAppBar() {
                 />
               </IconButton>
               <Divider sx={{ mx: 2 }} orientation="vertical" flexItem />
-              <Typography variant="h6" color="black">
+              <Typography variant="h6" color="rgba(0, 0, 0, 0.87)">
                 Surface for Business
               </Typography>
 
