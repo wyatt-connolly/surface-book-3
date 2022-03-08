@@ -15,25 +15,16 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import Popover from "@mui/material/Popover";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { styled } from "@mui/material/styles";
+import Link from "../src/Link";
+
 import Image from "next/image";
 import PersonAddAltOutlinedIcon from "@mui/icons-material/PersonAddAltOutlined";
-
-const Hide = styled("div")(({ theme }) => ({
-  [theme.breakpoints.up("md")]: {
-    display: "none",
-  },
-}));
-const HideAppBar = styled("div")(({ theme }) => ({
-  [theme.breakpoints.down("md")]: {
-    display: "none",
-  },
-}));
+import { HideDesktop, HideMobile } from "../src/theme";
 
 export default function ButtonAppBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <Hide>
+      <HideMobile>
         <AppBar
           position="static"
           sx={{ backgroundColor: "white", boxShadow: "none" }}
@@ -67,8 +58,7 @@ export default function ButtonAppBar() {
             </Box>
           </Toolbar>
         </AppBar>
-      </Hide>
-      <Hide>
+
         <Accordion>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
@@ -77,10 +67,40 @@ export default function ButtonAppBar() {
           >
             <Typography>Surface for Business</Typography>
           </AccordionSummary>
+          <AccordionDetails sx={{ backgroundColor: "#e6e6e6" }}>
+            <Link
+              variant="body1"
+              color="inherit"
+              href="#features"
+              underline="none"
+            >
+              Features
+            </Link>
+          </AccordionDetails>
+          <AccordionDetails sx={{ backgroundColor: "#e6e6e6" }}>
+            <Link
+              variant="body1"
+              color="inherit"
+              href="#tech-specs"
+              underline="none"
+            >
+              Tech Specs
+            </Link>
+          </AccordionDetails>
+          <AccordionDetails sx={{ backgroundColor: "#0067b8" }}>
+            <Link
+              variant="body1"
+              color="#fff"
+              href="https://www.microsoft.com/en-us/surface/business/where-to-buy-microsoft-surface"
+              underline="none"
+            >
+              WHERE TO BUY
+            </Link>
+          </AccordionDetails>
         </Accordion>
         <Divider />
-      </Hide>
-      <HideAppBar>
+      </HideMobile>
+      <HideDesktop>
         <AppBar
           position="static"
           sx={{ backgroundColor: "white", boxShadow: "none" }}
@@ -125,7 +145,7 @@ export default function ButtonAppBar() {
             </Box>
           </Toolbar>
         </AppBar>
-      </HideAppBar>
+      </HideDesktop>
     </Box>
   );
 }

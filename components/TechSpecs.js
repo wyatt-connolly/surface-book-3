@@ -5,7 +5,6 @@ import {
   Card,
   CardContent,
   CardMedia,
-  Container,
   Button,
   Accordion,
   AccordionSummary,
@@ -16,8 +15,7 @@ import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import { styled } from "@mui/material/styles";
 import RemoveCircleOutlineOutlinedIcon from "@mui/icons-material/RemoveCircleOutlineOutlined";
 import Image from "next/image";
-import ImageCarousel1 from "./ImageCarousel/ImageCarousel-1";
-import ImageCarousel2 from "./ImageCarousel/ImageTabs";
+
 import BasicTable from "./Table";
 
 const ResponsiveCard = styled("div")(({ theme }) => ({
@@ -34,6 +32,7 @@ export default function TechSpecs({ expanded, setExpanded, handleChange }) {
   return (
     <>
       <Accordion
+        id="tech-specs"
         expanded={expanded === "panel1"}
         onChange={handleChange("panel1")}
         sx={{
@@ -49,7 +48,7 @@ export default function TechSpecs({ expanded, setExpanded, handleChange }) {
           id="panel1a-header"
         >
           <Button
-            sx={{ my: 8 }}
+            sx={{ my: 6 }}
             startIcon={
               expanded === "panel1" ? (
                 <RemoveCircleOutlineOutlinedIcon sx={{ color: "#0067b8;" }} />
@@ -71,16 +70,14 @@ export default function TechSpecs({ expanded, setExpanded, handleChange }) {
           textAlign: "center",
         }}
       >
-        <Container maxWidth="md">
-          <Typography variant="h5" fontWeight="bold" gutterBottom>
-            More from the Book you know
-          </Typography>
-          <Typography variant="body1" paragraph gutterBottom>
-            Tackle tough tasks anywhere you want to work. Surface Book 3 has
-            more speed than before and faster memory with up to 2TB of
-            blazing-fast storage.
-          </Typography>
-        </Container>
+        <Typography variant="h5" fontWeight="bold" gutterBottom>
+          More from the Book you know
+        </Typography>
+        <Typography variant="body1" paragraph gutterBottom>
+          Tackle tough tasks anywhere you want to work. Surface Book 3 has more
+          speed than before and faster memory with up to 2TB of blazing-fast
+          storage.
+        </Typography>
 
         <Card
           sx={{
@@ -97,6 +94,7 @@ export default function TechSpecs({ expanded, setExpanded, handleChange }) {
               component="img"
               image="/surfacebook2.bmp"
               alt="surface book"
+              objectFit="cover"
             />
             <ResponsiveCard sx={{ position: "absolute" }}>
               <CardContent>
@@ -122,103 +120,6 @@ export default function TechSpecs({ expanded, setExpanded, handleChange }) {
             </ResponsiveCard>
           </Stack>
         </Card>
-        <Box sx={{ my: 8 }}>
-          <Container maxWidth="md">
-            <Typography variant="h5" fontWeight="bold" gutterBottom>
-              Built for performance
-            </Typography>
-            <Typography variant="body1" paragraph gutterBottom>
-              Our most powerful Surface laptop yet is a high-performance
-              business laptop that helps you tackle complex tasks. Faster than
-              ever, Surface Book 3 is optimized for productivity.
-            </Typography>
-          </Container>
-        </Box>
-
-        <Box sx={{ my: 8 }}>
-          <Image
-            src="/surfacebook3.bmp"
-            width={375}
-            height={209}
-            layout="responsive"
-          />
-        </Box>
-      </Box>
-      <Box>
-        <Container maxWidth="md">
-          <Stack direction={{ xs: "column", lg: "row" }}>
-            <Box>
-              <Typography variant="h5" fontWeight="bold">
-                Faster than before
-              </Typography>
-              <Typography variant="body1" paragraph gutterBottom>
-                Quad-core powered 10th Gen Intel® Core™ i7 processors help make
-                Surface Book 3 a powerful detachable laptop.
-              </Typography>
-            </Box>
-            <Box>
-              <Typography variant="h5" fontWeight="bold">
-                Performance for graphics-intensive tasks
-              </Typography>
-              <Typography variant="body1" paragraph gutterBottom>
-                Speed through software like Autodesk® AutoCAD®, Dassault
-                SOLIDWORKS™, and Adobe® Creative Cloud®,7 and code fast in
-                Microsoft Visual Studio.
-              </Typography>
-            </Box>
-            <Box>
-              <Typography variant="h5" fontWeight="bold">
-                Power your productivity all day
-              </Typography>
-              <Typography variant="body1" paragraph gutterBottom>
-                Get up to 17.5 hours battery life and get back to work with
-                improved standby that extends battery life for days.
-              </Typography>
-            </Box>
-            <Box>
-              <Typography variant="h5" fontWeight="bold">
-                Get back to work quickly and securely
-              </Typography>
-              <Typography variant="body1" paragraph gutterBottom>
-                Instant On brings your screen up fast, and Windows Hello logs
-                you in with a glance. Open the lid and return to your task in an
-                instant.
-              </Typography>
-            </Box>
-          </Stack>
-        </Container>
-
-        <Box
-          sx={{
-            textAlign: "center",
-          }}
-        >
-          <Box sx={{ my: 8 }}>
-            <Container maxWidth="md">
-              <Typography variant="h5" fontWeight="bold">
-                Versatility for the ways you work and create
-              </Typography>
-              <Typography variant="body1" paragraph gutterBottom>
-                Unleash your creativity however inspiration strikes. Whether
-                sketching ideas and handwriting notes, sharing your view with
-                others, or writing code, this detachable laptop adapts to the
-                endless ways you create and collaborate.
-              </Typography>
-            </Container>
-          </Box>
-
-          <ImageCarousel1 />
-          <Typography variant="h5" fontWeight="bold" gutterBottom>
-            Get your job done
-          </Typography>
-          <Typography variant="body1" paragraph gutterBottom>
-            Leave your desk behind and keep the best graphics performance of any
-            Surface laptop by your side. Create content, compile code, deploy
-            data models, or realize 3D visualizations wherever you work best.
-          </Typography>
-          <Button>SEE APPS CERTIFIED FOR SURFACE BOOK 3</Button>
-          <ImageCarousel2 />
-        </Box>
       </Box>
     </>
   );

@@ -5,23 +5,35 @@ export default function Features() {
   return (
     <Container maxWidth="md">
       <Stack
+        id="features"
         direction={{ xs: "column", sm: "row" }}
-        spacing={{ xs: 1, sm: 5, md: 5 }}
+        spacing={{ xs: 1, sm: 4 }}
         justifyContent="center"
         sx={{
           textAlign: "center",
           mt: 2,
-          mb: { xs: 3, sm: 10 },
+          mb: 2,
         }}
       >
         <Stack direction={{ xs: "column", md: "row" }}>
           <Typography variant="subtitle1" paragraph gutterBottom>
-            Up to <Typography variant="h4">i7</Typography> 10th Gen Intel Core
-            Processor
+            Up to{" "}
+            <Typography
+              variant="h4"
+              component="paragraph"
+              sx={{ display: "block" }}
+            >
+              i7
+            </Typography>{" "}
+            10th Gen Intel Core Processor
           </Typography>
           <Typography variant="subtitle1" paragraph gutterBottom>
             Up to 2TB SSD and{" "}
-            <Typography variant="h4" component="p">
+            <Typography
+              variant="h4"
+              component="paragraph"
+              sx={{ display: "block" }}
+            >
               32GB
             </Typography>{" "}
             RAM
@@ -30,16 +42,24 @@ export default function Features() {
         <Stack direction={{ xs: "column", md: "row" }}>
           <Typography variant="subtitle1" paragraph gutterBottom>
             Choose from NVIDIA®{" "}
-            <Typography variant="h4" component="p">
+            <Typography
+              variant="h4"
+              component="paragraph"
+              sx={{ display: "block" }}
+            >
               Quadro
             </Typography>{" "}
             RTX™ 3000 or GeForce® GTX graphics
           </Typography>
           <Typography variant="subtitle1" paragraph gutterBottom>
-            Two sizes:
-            <Typography variant="h4" component="p">
+            Two sizes:{" "}
+            <Typography
+              variant="h4"
+              component="paragraph"
+              sx={{ display: "block" }}
+            >
               13.5”/15”
-            </Typography>
+            </Typography>{" "}
             detachable PixelSense™ Display
           </Typography>
         </Stack>

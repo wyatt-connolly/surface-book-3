@@ -11,13 +11,14 @@ import {
   AccordionDetails,
   Container,
   Stack,
+  useMediaQuery,
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import useMediaQuery from "@mui/material/useMediaQuery";
 import PlayArrowOutlinedIcon from "@mui/icons-material/PlayArrowOutlined";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Image from "next/image";
 import PropTypes from "prop-types";
+import { HeroText } from "../src/theme";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -51,13 +52,6 @@ function a11yProps(index) {
     "aria-controls": `simple-tabpanel-${index}`,
   };
 }
-
-const HeroText = styled("div")(({ theme }) => ({
-  [theme.breakpoints.up("lg")]: {
-    position: "absolute",
-    top: "calc(50%)",
-  },
-}));
 
 export default function Home() {
   const [value, setValue] = React.useState(0);
@@ -120,8 +114,7 @@ export default function Home() {
             <Stack
               alignItems="center"
               sx={{
-                mb: 12,
-                mt: 2,
+                my: 4,
               }}
             >
               <Tabs
