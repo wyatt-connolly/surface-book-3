@@ -125,7 +125,11 @@ export default function ButtonAppBar() {
                 Surface for Business
               </Typography>
 
-              <Button sx={{ ml: 2 }} variant="contained">
+              <Button
+                href="https://www.microsoft.com/en-us/surface/business/where-to-buy-microsoft-surface"
+                sx={{ ml: 2 }}
+                variant="contained"
+              >
                 WHERE TO BUY
               </Button>
             </Box>
