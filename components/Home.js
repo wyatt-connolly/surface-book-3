@@ -108,7 +108,11 @@ export default function Home() {
               flexibility of a robust laptop, processor-powered tablet, and
               portable studio.
             </Typography>
-            <Button startIcon={<PlayArrowOutlinedIcon />} variant="text">
+            <Button
+              href="https://www.youtube.com/watch?v=kYFnAnmwG5c"
+              startIcon={<PlayArrowOutlinedIcon />}
+              variant="text"
+            >
               See it in action
             </Button>
             <Stack
