@@ -2,7 +2,7 @@
 
 > Website for Surface Book 3. Made with Next.js
 
-![pf66TUt](https://user-images.githubusercontent.com/88942814/163514527-846cc051-8589-4576-b4de-33063ec3ed83.png)
+![hDH7EkR](https://user-images.githubusercontent.com/88942814/163635018-3762e7bb-b0e5-4a18-b9f9-498a27c4f9b7.png)
 
 # 📌 Table of Contents
 
@@ -28,3 +28,15 @@ This project was made using the follow technologies:
 # :pencil: Lessons
 
 # :crystal_ball: Visual Demo
+
+> **Homepage**
+
+![hDH7EkR](https://user-images.githubusercontent.com/88942814/163635018-3762e7bb-b0e5-4a18-b9f9-498a27c4f9b7.png)
+
+>**Tech Specs**
+
+![NRuxTuy](https://user-images.githubusercontent.com/88942814/163635125-f8a95183-bfe0-4e89-9651-f293cfb61eda.png)
+
+>**Carousel**
+
+![pAlFgBh](https://user-images.githubusercontent.com/88942814/163635299-653acb71-1776-4721-b18a-cd52dee85be7.png)
