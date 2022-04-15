@@ -1,46 +1,30 @@
-# Next.js example
+# Microsoft Surface Book 3 Mockup Site
 
-## How to use
+> Website for Surface Book 3. Made with Next.js
 
-Download the example [or clone the repo](https://github.com/mui/material-ui):
+![pf66TUt](https://user-images.githubusercontent.com/88942814/163514527-846cc051-8589-4576-b4de-33063ec3ed83.png)
 
-<!-- #default-branch-switch -->
+# 📌 Table of Contents
 
-```sh
-curl https://codeload.github.com/mui/material-ui/tar.gz/master | tar -xz --strip=2  material-ui-master/examples/nextjs
-cd nextjs
-```
+- [Demo Website](#eyes-demo-website)
+- [Technologies](#computer-technologies)
+- [Features](#rocket-features)
+- [Lessons](#pencil-lessons)
+- [Visual Demo](#crystal_ball-visual-demo)
 
-Install it and run:
+# :eyes: Demo Website
 
-```sh
-npm install
-npm run dev
-```
+:point_right: demo: https://marketing-site-indol.vercel.app/
 
-or:
+# :computer: Technologies
 
-<!-- #default-branch-switch -->
+This project was made using the follow technologies:
 
-[![Edit on StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/mui/material-ui/tree/master/examples/nextjs)
+- [Next.js](https://nextjs.org/)
+- [MUI](https://mui.com/)
 
-[![Edit on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/mui/material-ui/tree/master/examples/nextjs)
+# :rocket: Features
 
-## The idea behind the example
+# :pencil: Lessons
 
-The project uses [Next.js](https://github.com/vercel/next.js), which is a framework for server-rendered React apps.
-It includes `@mui/material` and its peer dependencies, including `emotion`, the default style engine in MUI v5.
-If you prefer, you can [use styled-components instead](https://mui.com/guides/interoperability/#styled-components).
-
-## The link component
-
-Next.js has [a custom Link component](https://nextjs.org/docs/api-reference/next/link).
-The example folder provides adapters for usage with MUI.
-More information [in the documentation](https://mui.com/guides/routing/#next-js).
-
-## What's next?
-
-<!-- #default-branch-switch -->
-
-You now have a working example project.
-You can head back to the documentation, continuing browsing it from the [templates](https://mui.com/getting-started/templates/) section.
+# :crystal_ball: Visual Demo
