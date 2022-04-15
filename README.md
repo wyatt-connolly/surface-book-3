@@ -1,6 +1,6 @@
-# Microsoft Surface Book 3 Mockup Site
+# Microsoft Surface Book 3 Site
 
-> Website for Surface Book 3. Made with Next.js
+> Landing page for Surface Book 3. Made with Next.js
 
 ![hDH7EkR](https://user-images.githubusercontent.com/88942814/163635018-3762e7bb-b0e5-4a18-b9f9-498a27c4f9b7.png)
 
