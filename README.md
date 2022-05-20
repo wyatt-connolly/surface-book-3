@@ -42,6 +42,14 @@ This project was made using the follow technologies:
 - MUI Components
 - Optimized Images using Next Image component
 
+# :house: Local Development
+
+After intalling all dependencies (npm i) run this command:
+
+ `npm run dev`
+
+This will start both server and client in dev mode. The app is now available on localhost:3000.
+
 # :pencil: Lessons
 
 This project is to demonstrate my knowledge of Responsive UI and ability to recreate a website using a CSS library. 
@@ -49,3 +57,7 @@ This project is to demonstrate my knowledge of Responsive UI and ability to recr
 For any business, an amazing visual representation of their product is a must. I wanted to showcase different ways of displaying a product customers could buy. Slideshows, tables, and image panels are a great way to do that. 
 
 I didn't have that much difficulty creating this website. I consider myself proficient at CSS in general. Flexbox, grid, margins, padding, positioning etc. came very naturally to me. One thing that helped me was using Chrome devtools to change the CSS in the browser. Once I had the visual I wanted there, all I had to do was copy-paste the CSS declaration from the browser to VSCode. Building up from mobile to desktop simplifies the code as well. 
+
+# :link: License
+
+Design and assets belong to [microsoft.com](https://www.microsoft.com)
